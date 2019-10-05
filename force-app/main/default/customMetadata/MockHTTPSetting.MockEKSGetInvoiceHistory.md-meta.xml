@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>MockEKS Get Invoice History</label>
+    <protected>false</protected>
+    <values>
+        <field>Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>EndPointMatchPattern__c</field>
+        <value xsi:type="xsd:string">callout:EKSNamedCredential/api/users/2</value>
+    </values>
+    <values>
+        <field>HTTPMethod__c</field>
+        <value xsi:type="xsd:string">GET</value>
+    </values>
+    <values>
+        <field>HandlerInputs__c</field>
+        <value xsi:type="xsd:string">{&quot;StaticResourceName&quot;:&quot;this is the file to load&quot;}</value>
+    </values>
+    <values>
+        <field>MockHandlerClass__c</field>
+        <value xsi:type="xsd:string">HTTPMockStaticResourceLoader</value>
+    </values>
+</CustomMetadata>
