@@ -8,7 +8,7 @@ public class HTTPMockStaticResourceLoader implements HttpRequestController, Mock
         
         //refactor to another method
         HttpResponse response = new HttpResponse();
-        response.setBody(JSON.serialize(inputs)); //change to read static resource
+        response.setBody(loadFromStaticResource(inputs.StaticResourceName));
         response.setStatusCode(200);
         return new HttpResponseContext(response);
     }
@@ -20,5 +20,9 @@ public class HTTPMockStaticResourceLoader implements HttpRequestController, Mock
     private class InputSetting {
     	public String StaticResourceName;        
     }
-   
+   	
+    private string loadFromStaticResource(String filename) {
+        StaticResource sr = [SELECT Id, Body FROM StaticResource WHERE Name =: filename LIMIT 1];
+        return sr.Body.toString();
+    }
 }
