@@ -22,7 +22,7 @@ Target capabilities include:
 
 # Usage 
 ### Sample callout - available in this repo
-```sh
+```JavaScript
 /* 
 	Get instance of security setter for request.
 */
