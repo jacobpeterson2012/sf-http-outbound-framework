@@ -29,8 +29,7 @@ system.debug(controller.execute().getBody());
 ```
 
 To enable with or without mock custom metad data settings can be set - MockHTTPSetting__mdt
-
-  
+The current example loads a mock response from a staic resource when method and endpoint pattern match.
   
 
 In this example the common EKSHttpSecuritySetter - this is common is based on a common named credentail for this org which as all outbound integrations should go through the same integration layer.
