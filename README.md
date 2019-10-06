@@ -23,25 +23,20 @@ Target capabilities include:
 # Usage 
 ### Sample callout - available in this repo
 ```JavaScript
-/* 
-	Get instance of security setter for request.
-*/
+// Get instance of security setter for request.
 HttpSecuritySetter securitySetter = new EKSHttpSecuritySetter();
 String httpMethod = 'GET';
 
-/*
-	Create new request. Passing in the security setter will set the 
-	base url for the request from the name credential.
-*/
+
+// Create new request. Passing in the security setter will set the 
+// base url for the request from the name credential.
 HttpRequestContext ctx = new HttpRequestContext(securitySetter, securitySetter);
 
-//Set resource path for request
+// Set resource path for request
 ctx.setPath('/api/users/2');
 
-/*
-	Get request controller.  This may return a mock request handler 
-	if defined in custom settings.
-*/
+// Get request controller.  This may return a mock request handler 
+// if defined in custom settings.
 HttpRequestController controller = HttpRequestControllerFactory.getHttpController(ctx);
 
 //Execute request
